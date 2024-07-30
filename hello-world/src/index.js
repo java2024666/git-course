@@ -4,11 +4,31 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function Product(props) {
+  return(
+    <h1> {props.name} </h1>
+  );
+}
+
+function Price(props) {
+  return(
+    <h2> 價格: {props.number} </h2>
+  );
+}
+
+const onBuy = (event) =>{
+  console.log('以購買商品')
+}
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div>
+    <Product name='蘋果' />
+    <Price number='5' />
+    <button value={'以購買商品'} onClick={onBuy}>購買</button>
+
+  </div>
   
 );
 
