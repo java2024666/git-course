@@ -8,34 +8,23 @@ const testFunction =()=> {
   return(
       // Create a simple form with padding 20px
       <div>
-        <h1>感測器資料</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>裝置名稱</th>
-                    <th>溫度</th>
-                    <th>濕度</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>sensor-001</td>
-                    <td>35</td>
-                    <td>80</td>
-                </tr>
-
-                <tr>
-                    <td>sensor-002</td>
-                    <td>28</td>
-                    <td>65</td>
-                </tr>
-                <tr>
-                    <td>sensor-003</td>
-                    <td>32</td>
-                    <td>75</td>
-                </tr>
-            </tbody>
-        </table>
+      <h1>Dashboard</h1>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>裝置名稱</th>
+            <th>溫度</th>
+            <th>濕度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>sensor-001</td>
+            <td>35</td>
+            <td>80</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
