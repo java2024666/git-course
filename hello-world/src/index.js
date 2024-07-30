@@ -3,17 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Footer from './Footer';
 
-const multiButton=()=>{
-  var output=[];
-  for(let i=0;i<11;++i)
-      output.push(<button>我是第{i}個按鍵</button>)
-  return output;
+const getValue=(event)=>{
+  console.log(event.target.value)
+}
+
+const click = ()=> {
+  let date = Date()
+  console.log(date)
+  alert("今日日期是: " + date)
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(multiButton());
+root.render(<div>
+              <button value={true} onClick={click}>按下以顯示今天的日期 </button>
+            </div>);
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
