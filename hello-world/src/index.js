@@ -9,10 +9,7 @@ const data = [
   { "temperature": "34°C" }
 ];
 
-data.map(temp, index) => {
-  const row = document.getElementById(`row${index}`);
-  const tempCall
-}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
