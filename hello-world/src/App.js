@@ -6,7 +6,7 @@ function App({data}) {
   return (
     <div>
     <h1>Dashboard</h1>
-    <table border="1" id="table">
+    <table border="1" id="table" width="300">
       <thead>
         <tr>
           <th>Hour</th>
