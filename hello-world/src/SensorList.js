@@ -1,10 +1,11 @@
 import React from 'react';
 
 function Sensor({name, isOnline}){
-    if (!isOnline){
-        return null;
+    if (isOnline){
+        
+        return <li>{name}-在線</li>
     }
-    return <li>{name}-在線</li>
+    return null;
 }
 
 function SensorList() {
@@ -17,7 +18,7 @@ function SensorList() {
 
   return (
     <section>
-        <h1>儀表板</h1>
+      <h1>儀表板</h1>
       <h2>感測器狀態監控</h2>
       <ul>
         {sensors.map((sensor, index) => (
