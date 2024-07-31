@@ -1,35 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
-function Product(props) {
+function Product({name}) {
   return(
-    <h1> {props.name} </h1>
+    <h1> {name} </h1>
   );
 }
 
-function Price(props) {
+function Price({number}) {
   return(
-    <h2> 價格: {props.number} </h2>
+    <h2> 價格: {number} </h2>
   );
 }
+
+function App() {
+  const ProductName = '蘋果';
+  const PriceNumber = '5';
+
 
 const onBuy = (event) =>{
-  console.log('以購買商品')
+  console.log(`以購買商品: ${ProductName}, 價格: ${PriceNumber}`)
 }
+
+return (
+  <div>
+    <Product name={ProductName} />
+    <Price number={PriceNumber} />
+    <button onClick={onBuy}>購買</button>
+  </div>
+);
+}
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
-    <Product name='蘋果' />
-    <Price number='5' />
-    <button value={'以購買商品'} onClick={onBuy}>購買</button>
-
-  </div>
-  
+  <App />
 );
 
 // If you want to start measuring performance in your app, pass a function
