@@ -1,6 +1,7 @@
 import React, {Component}from 'react';
 import ReactDOM from 'react-dom/client';
-import UserProfile from './update';
+import LifecycleDemo from './LifecycleDemo';
+
 
 
 class App extends Component {
@@ -22,9 +23,9 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.toggleUserProfile}>
-          {this.state.showUserProfile ? 'Hide' : 'Show'} User Profile
+          {this.state.showUserProfile ? 'Hide' : 'Show'} count
         </button>
-        {this.state.showUserProfile && <UserProfile />}
+        {this.state.showUserProfile && <LifecycleDemo />}
       </div>
     );
   }
