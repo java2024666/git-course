@@ -18,7 +18,7 @@ class LifecycleDemo extends Component {
 
   // 元件被更新時（Update）執行的函數
   componentDidUpdate(prevProps, prevState) {
-    console.log('component did mount')
+    console.log('component did update')
   }
 
 
@@ -29,6 +29,7 @@ class LifecycleDemo extends Component {
 
 addcount = () => {
   this.setState({count: this.state.count + 1});
+  console.log({count: this.state.count})
 };
 
   render() {
