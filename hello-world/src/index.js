@@ -1,39 +1,14 @@
-import React, {Component}from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import UserProfile from './update';
+import SensorData from './SensorData';
 
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showUserProfile: true
-    };
-  }
 
-  // 切換 UserProfile 組件顯示狀態
-  toggleUserProfile = () => {
-    this.setState(prevState => ({
-      showUserProfile: !prevState.showUserProfile
-    }));
-  }
-
-  render() {
-    return (
-      <div>
-        <button onClick={this.toggleUserProfile}>
-          {this.state.showUserProfile ? 'Hide' : 'Show'} User Profile
-        </button>
-        {this.state.showUserProfile && <UserProfile />}
-      </div>
-    );
-  }
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
+    <SensorData/>
   </React.StrictMode>
 );
 
