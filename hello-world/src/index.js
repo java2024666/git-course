@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import SensorList from './SensorList';
+import Greeting from './Greeting';
 import reportWebVitals from './reportWebVitals';
-
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-  <SensorList />
-  </React.StrictMode>
+  <div>
+  <Greeting divicename="Light" status="on" />
+  <Greeting divicename="DoorLock" status="Locked" />
+  <Greeting divicename="Thmometer" status="23 C" />
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
